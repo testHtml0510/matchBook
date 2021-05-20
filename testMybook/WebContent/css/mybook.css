@@ -1,0 +1,36 @@
+/*
+html {
+	font-size:12px;
+}
+*/
+    li{list-style:none;}
+    .container{
+    text-decoration: none;
+    max-width:774px;}
+
+    /* アニメーション前のメニューの状態 */
+    .menu{
+        opacity: 90%;
+      position: fixed;
+      z-index : 2;
+      background-color:#6C757D ;
+      right:0;
+      transform: translateY(-100%);
+      transition: all 0.6s;
+      width: 100%;
+    }
+
+    /* アニメーション後のメニューの状態 */
+    .menu.is-active{
+      transform: translateX(0);
+    }
+    .menu-item {
+        font-size: 20px;
+    }
+
+
+    /* ファーストビューimg幅 */
+.fv img{max-width:100%;}
+
+/*サムネイルimg */
+.thumbnail img{width: 100px;}

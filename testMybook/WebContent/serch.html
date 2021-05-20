@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品を検索</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<!----------------------------------CSS-------------------------------->
+<style>
+
+    li{list-style:none;}
+    
+    .container{
+    text-decoration: none;
+    max-width:774px;}　
+    
+    
+    /* ファーストビューimg幅 */
+    .fv img{max-width:100%;}
+    
+    /*サムネイルimg */
+    .thumbnail img{width: 100px;}
+    
+    /* アニメーション前のメニューの状態 */
+    .menu{
+        opacity: 90%;
+        position: fixed;
+        z-index : 2;
+        background-color:#6C757D ;
+        right:0;
+        transform: translateY(-100%);
+        transition: all 0.6s;
+        width: 100%;
+    }
+    
+    /* アニメーション後のメニューの状態 */
+    .menu.is-active{
+      transform: translateX(0);
+    }
+    .menu-item {
+        font-size: 20px;
+    }
+    </style>
+    <!----------------------------------CSS-------------------------------->
+    
+    <body>
+
+    <div class="container pt-5">
+
+    <div class="mt-5">
+    <form action="/matchBook/serchResult.html" method="post">
+        <h3 class="bg-dark p-3 mt-3 text-white">条件で検索</h3>
+		<br> 
+   <div class="d-flex flex-wrap">
+        <input type="radio" name="gender" value="1">男性向け　
+        <input type="radio" name="gender" value="2">女性向け
+    </div>
+	<hr/>
+    <div class="d-flex flex-wrap mt-3">
+        <input type="checkbox" name="genre" value="1">アクション　
+        <input type="checkbox" name="genre" value="2">恋愛　
+        <input type="checkbox" name="genre" value="3">ホラー・ミステリ　
+        <input type="checkbox" name="genre" value="4">ファンタジー　
+        <input type="checkbox" name="genre" value="5">スポーツ　
+        <input type="checkbox" name="genre" value="6">裏社会・アングラ　
+        <input type="checkbox" name="genre" value="7">グルメ　
+        <input type="checkbox" name="genre" value="8">日常
+    </div>
+    </div>
+	<hr/>
+
+<!--年代向けカテゴリ(※作業時間不足の為ボツ)-->
+    <!--<div class="d-flex flex-wrap mt-3">
+        <div class="btn btn-outline-secondary m-3 p-3">10代向け</div>
+        <div class="btn btn-outline-secondary m-3 p-3">20代向け</div>
+        <div class="btn btn-outline-secondary m-3 p-3">30代向け</div>
+        <div class="btn btn-outline-secondary m-3 p-3">40代向け</div>
+    </div>-->
+
+    <div class="d-flex flex-wrap mt-3">
+        <input type="radio" name="publisher" value="ジャンプ">ジャンプ　
+        <input type="radio" name="publisher" value="ジャンプ">サンデー　
+        <input type="radio" name="publisher" value="マガジン">マガジン　
+        <input type="radio" name="publisher" value="チャンピオン">チャンピオン　
+        <input type="radio" name="publisher" value="りぼん">りぼん　
+        <input type="radio" name="publisher" value="花とゆめ">花とゆめ　
+        <input type="radio" name="publisher" value="マーガレット">マーガレット
+    </div>
+
+    <input type="submit" value="検索" class="mt-5 btn btn-outline-secondary btn-block p-3">
+    </form>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
